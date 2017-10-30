@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace week2IndividualProgramLoop
+{
+    public partial class w2SequenceLoop : Form
+    {
+        public w2SequenceLoop()
+        {
+            InitializeComponent();
+        }
+
+        private void btn_interval_Click(object sender, EventArgs e)
+        {
+            int i = 10;
+
+            while (i <= 100)
+            {
+                i = i + 3;
+                lst_box.Items.Add(i - 3);
+            }
+
+
+            if (MessageBox.Show("End Program? ", "Number Sequence", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.Yes)
+            {
+
+                System.Windows.Forms.Application.Exit();
+            }
+            else
+            {
+                
+            }
+            
+        }
+    }
+}
+            
